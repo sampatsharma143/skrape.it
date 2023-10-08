@@ -118,3 +118,6 @@ public val Result.document: Doc
 
 @SkrapeItDsl
 public fun <T> Result.htmlDocument(init: Doc.() -> T): T = htmlDocument(html = responseBody, baseUri = baseUri).init()
+
+@SkrapeItDsl
+public fun <T> Result.htmlDocument(init: Doc.() -> T,jsExecution:Boolean=false): T = htmlDocument(html = responseBody, baseUri = baseUri,jsExecution = jsExecution).init()
